@@ -9,7 +9,12 @@ export default function Meals() {
     data: loadMeals,
     isLoading,
     error,
-  } = useHttp('http://localhost:5000/meals', requestConfig,[]);
+  } = useHttp(
+    // 'http://localhost:5000/meals'
+    "https://reactfood-backnpm-run-install-server.onrender.com/meals",
+    requestConfig,
+    []
+  );
 
   if (isLoading) {
     return <p className="center">fetching data ...</p>;

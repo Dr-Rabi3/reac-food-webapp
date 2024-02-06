@@ -20,7 +20,8 @@ export default function CheckoutForm() {
     useContext(openModal);
   const { items , clearCart} = useContext(CartContext);
   const { data, isLoading, error, sendRequest, clearData } = useHttp(
-    "http://localhost:5000/orders",
+    // "http://localhost:5000/orders",
+    "https://reactfood-backnpm-run-install-server.onrender.com/orders",
     requestConfig
   );
   const totalCost = items.reduce(

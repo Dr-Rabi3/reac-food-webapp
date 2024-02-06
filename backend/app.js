@@ -5,7 +5,6 @@ import { config } from "dotenv";
 import cors from "cors";
 import { Meal } from "./models/meal.js";
 import { Order } from "./models/orders.js";
-import path from "path";
 import fs from "fs/promises";
 config();
 const app = express();
@@ -13,8 +12,8 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 const corsOptions = {
-  // origin: "https://quickquiz-0f4n.onrender.com", // frontend URI (ReactJS)
-  origin: "http://localhost:3000", // frontend URI (ReactJS)
+  origin: "https://reactfood-front.onrender.com", // frontend URI (ReactJS)
+  // origin: "http://localhost:3000", // frontend URI (ReactJS)
 };
 app.use(cors(corsOptions));
 
