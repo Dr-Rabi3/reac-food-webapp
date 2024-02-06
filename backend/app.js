@@ -5,6 +5,8 @@ import { config } from "dotenv";
 import cors from "cors";
 import { Meal } from "./models/meal.js";
 import { Order } from "./models/orders.js";
+import path from "path";
+import fs from "fs/promises";
 config();
 const app = express();
 app.use(bodyParser.json());
@@ -97,7 +99,22 @@ app.post("/orders", async (req, res) => {
   }
 });
 
-app.use("/images", express.static("images"));
+// app.use("/images", express.static("images"));
+
+app.get("/images/:imageName", async (req, res) => {
+  try {
+    const imageName = req.params.imageName.slice(1);
+    // const imagePath = path.join(__dirname, "images", imageName);
+    const imageData = await fs.readFile('./images/' + imageName);
+
+    // res.setHeader("Content-Type", "image/jpg");
+    // res.send(imageData);
+    const base64Image = Buffer.from(imageData).toString("base64");
+    res.send(base64Image);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 app.use((req, res) => {
   if (req.method === "OPTIONS") {
