@@ -18,7 +18,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
+  padding: 2rem 10%;
+  position: sticky;
+  top: 0%;
+  background: linear-gradient(#29251c, #2c2306);
+  padding: 2rem 10% 0.7rem 10%;
 }
 
 #main-header #title {
@@ -59,6 +63,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
+  margin-top: 0%;
 }
 
 .meal-item {

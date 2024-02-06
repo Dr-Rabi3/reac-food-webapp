@@ -8,9 +8,8 @@ import openModal from "../store/ModalContext";
 export default function Cart() {
   const { items, addItem, removeItem } = useContext(CartContext);
   const { currentProgress, hideCart, showCheckout } = useContext(openModal);
-
   const totalCost = items.reduce(
-    (totalCost, item) => totalCost + item.price * item.quantity,
+    (totalCost, item) => totalCost + item.price.$numberDecimal * item.quantity,
     0
   );
   return (
@@ -26,7 +25,7 @@ export default function Cart() {
             <li key={item.id} className="cart-item">
               <p>
                 {item.name} - {item.quantity} x{" "}
-                {currencyFormatting.format(item.price)}
+                {currencyFormatting.format(item.price.$numberDecimal)}
               </p>
               <div className="cart-item-actions">
                 <button onClick={() => removeItem(item.id)}>-</button>

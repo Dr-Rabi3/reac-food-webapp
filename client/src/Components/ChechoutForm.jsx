@@ -25,7 +25,7 @@ export default function CheckoutForm() {
     requestConfig
   );
   const totalCost = items.reduce(
-    (totalCost, item) => totalCost + item.price * item.quantity,
+    (totalCost, item) => totalCost + item.price.$numberDecimal * item.quantity,
     0
   );
   const onSendData = (event) => {

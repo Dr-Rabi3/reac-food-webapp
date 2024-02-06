@@ -10,7 +10,7 @@ export default function Meals() {
     isLoading,
     error,
   } = useHttp(
-    // 'http://localhost:5000/meals'
+    // 'http://localhost:5000/meals',
     "https://reactfood-backnpm-run-install-server.onrender.com/meals",
     requestConfig,
     []
