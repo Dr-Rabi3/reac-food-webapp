@@ -1,3 +1,5 @@
+***React Food Website Menu***
+
 ### Description
 This project is a React-based food website that displays a menu of food items. Users can browse through different food items and choose from them.
 
@@ -28,12 +30,6 @@ To run the project locally, follow these steps:
 - **src/store:** Contains the context provider and related files for managing the shopping cart state.
 - **src/util:** Contains utility functions used across the application.
 - **src/App.js:** Main component that defines the routes and overall structure of the application.
-
-### Screenshots
-![Home Page](screenshots/home-page.png)
-![Menu Page](screenshots/menu-page.png)
-![Item Details Page](screenshots/item-details-page.png)
-![Responsive Design](screenshots/responsive-design.png)
 
 ## Demo
 
