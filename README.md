@@ -1,6 +1,4 @@
-***React Food Website Menu***
-
-### Description
+#React Food Website Menu
 This project is a React-based food website that displays a menu of food items. Users can browse through different food items and choose from them.
 
 ### Features
